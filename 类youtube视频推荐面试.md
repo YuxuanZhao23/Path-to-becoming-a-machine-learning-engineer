@@ -40,7 +40,7 @@
 
 1. 视频：id，长度，标题，tag，likes，views，language
 2. 用户：id，名字，年龄，性别，城市，国家，语言，时区
-3. interaction/ context：user id，video id，type，timestamp，location
+3. interaction + context：user id，video id，type，timestamp，location
 4. 处理：
    1. 对于 categorical：embedding/ one-hot/ bucketize 之后 one-hot
    2. 对于 数字：保持
@@ -52,7 +52,7 @@
 1. 离线指标：Precision@k（推荐的视频里面有多少比例是relevant）, mAP, Diversity
 2. 在线指标：CTR, #completed, total watch time, explicit user feedback
 
-# 上线
+# serving
 
 1. candidate generation（recall）：双塔，只使用视频id（因为用户的embedding可以预先准备好），快速筛选，一般是多条通道
 2. scoring：还是双塔，但是做的更大
