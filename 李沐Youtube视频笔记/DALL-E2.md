@@ -25,7 +25,8 @@ DALL-E 2 模型
 - 会生成很多张图片，用CLIP给这些图片排名找到最 relevant
 - decoder 只用了 UNet 这种纯CNN的方案，里面没有 transformer
 - diffusion prior 里面用了 transformer decoder，但是发现预测噪声没用，还是每一步直接预测图片
-- 因为用了 CLIP 所以更多是物体的出现，对于语义上的理解还有偏差
+- 因为用了 CLIP 所以更多是控制物体有没有出现，对于语义上的理解还有偏差，方位/距离等
+- 同时模型因为 tokenize 的缘故，很难让图片生成正确的文字/标题，同时大家发现 DALL-E 2 好像学会了一门新的语言
 
 Diffusion
 
