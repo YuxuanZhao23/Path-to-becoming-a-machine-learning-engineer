@@ -18,6 +18,8 @@
   - 我们可以用这个来压缩上面那个0/1矩阵，变成每一个元素在不同的permutation中最小的1序号
   - 有一个非常重要的定理：Jaccard Similarity(s1, s2) = p(m(s1), m(s2))，也符合直觉，因为最小序号也需要是1，所以分母是交集，而相等的时候就是并集。我们的permutation越多，得到的结果就越近似
 - Locality Sensitive Hashing 是类似于 bloom filter，只有碰撞了的时候才去计算这两个文档的minhash相似性
+  - LSH 的一种常规做法是随机选定一个 hyperplane，然后给出 0/1 代表向量在这个 plane 之上还是之下
+  - 只有被 hash 成同一个值的元素会真的去算 similarity，常规算法有 cos similarity 或者 min hash
 
 # Heuristic filtering
 
